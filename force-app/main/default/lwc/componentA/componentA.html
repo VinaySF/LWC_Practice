@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Component A" icon-name="utility:color_swatch">
+        <div class="slds-m-around-medium" style="padding: 10px; margin: 8px;">
+            <lightning-input type="text" label="Enter Message here"></lightning-input>
+            <div style="margin-top: 10px; align-items: center;">
+                <lightning-button 
+                    label="Send" 
+                    icon-position="left" 
+                    icon-name="utility:send" 
+                    onclick={handleClick}>
+                </lightning-button>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <lightning-icon style="padding-left: 20px;padding-right: 10px;"
+                icon-name="utility:send" 
+                alternative-text="Send" 
+                size="small" 
+                title="Send Icon">
+            </lightning-icon>
+            <strong>
+              <lightning-formatted-text value={receivedMessage}></lightning-formatted-text>
+          </strong>
+        </div>
+    </lightning-card>
+</template>
